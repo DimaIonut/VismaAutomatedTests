@@ -6,8 +6,6 @@ import com.visma.tests.page.DatepickerPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ValidateAutomationPracticSite {
 
@@ -21,7 +19,7 @@ public class ValidateAutomationPracticSite {
 
     @Test
     @DisplayName("Validate the shown message contains my name from the previous step")
-    public void validateTheShownMessage() {
+    public void validateTheShownMessage() throws InterruptedException {
         automationPracticSitePage.open();
         automationPracticSitePage.goToAlertPage();
         automationPracticSitePage.moveFocusToTheCurrentTab();
@@ -42,14 +40,8 @@ public class ValidateAutomationPracticSite {
         datepickerPage.goToFormatDateTab();
         datepickerPage.swithToTheIframeAndCompleteDateField();
         datepickerPage.selectDateFormat();
+        datepickerPage.validateShownDate();
 
         automationPracticSitePage.close();
-    }
-
-    @Test
-    public void testHackerearth() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://interview.navx.com/");
     }
 }

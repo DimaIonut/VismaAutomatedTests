@@ -10,4 +10,8 @@ public class TypiCodeObject {
     private Long id;
     private String title;
     private String body;
+
+    public String getTitle() {
+        return title;
+    }
 }

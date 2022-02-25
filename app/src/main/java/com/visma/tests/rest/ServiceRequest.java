@@ -10,6 +10,6 @@ public class ServiceRequest extends BaseService {
     }
 
     public TypiCodeObject[] getTypiCodeObjectsDetails() {
-        return getRequest("posts").extract().as(TypiCodeObject[].class);
+        return getRequest("posts").log().all().extract().as(TypiCodeObject[].class);
     }
 }

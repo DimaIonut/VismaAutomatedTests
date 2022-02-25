@@ -12,7 +12,7 @@ public class BaseService {
 
     private static RequestSpecification requestSpecification;
 
-    private static String baseUrl = "https://jsonplaceholder.typicode.com";
+    private static String baseUrl = "http://jsonplaceholder.typicode.com";
 
     public void restAssuredSetUp() {
         requestSpecification = getDefaultSpecBuilder(baseUrl).build();

@@ -6,6 +6,8 @@ import com.visma.tests.page.DatepickerPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ValidateAutomationPracticSite {
 
@@ -42,5 +44,12 @@ public class ValidateAutomationPracticSite {
         datepickerPage.selectDateFormat();
 
         automationPracticSitePage.close();
+    }
+
+    @Test
+    public void testHackerearth() {
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://interview.navx.com/");
     }
 }

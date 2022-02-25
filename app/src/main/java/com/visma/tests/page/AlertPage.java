@@ -14,6 +14,9 @@ public class AlertPage extends BaseWay2AutomationPage {
 
     public void goToInputAlertTab() {
         driver.findElement(By.xpath(inputAlertTab)).click();
+
+        driver.findElement(By.cssSelector("[id='email']")).sendKeys("");
+        driver.findElement(By.cssSelector(("[id='getEmail']"))).click();
     }
 
     public void swithToTheIframeAndClickOnTheInputBoxButton() {
